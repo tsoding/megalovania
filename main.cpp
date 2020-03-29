@@ -85,12 +85,12 @@ Note megalovania[] = {
 };
 size_t megalovania_count = sizeof(megalovania) / sizeof(megalovania[0]);
 
-const int SOMETHING_AUDIO_FREQUENCY = 48000;
-const int SOMETHING_AUDIO_SAMPLES = 4096;
+const int AUDIO_FREQUENCY = 48000;
+const int AUDIO_SAMPLES = 4096;
 const float AUDIO_CALLBACK_DT =
-    (float) SOMETHING_AUDIO_SAMPLES / (float) SOMETHING_AUDIO_FREQUENCY;
+    (float) AUDIO_SAMPLES / (float) AUDIO_FREQUENCY;
 const float AUDIO_SAMPLE_DT =
-    AUDIO_CALLBACK_DT / (float) SOMETHING_AUDIO_SAMPLES;
+    AUDIO_CALLBACK_DT / (float) AUDIO_SAMPLES;
 
 void MelodyAudioCallback(void *userdata, Uint8 *stream, int len)
 {
@@ -114,10 +114,10 @@ int main(void)
     melody.notes_size = megalovania_count;
 
     SDL_AudioSpec want = {};
-    want.freq = SOMETHING_AUDIO_FREQUENCY;
+    want.freq = AUDIO_FREQUENCY;
     want.format = AUDIO_F32;
     want.channels = 2;
-    want.samples = SOMETHING_AUDIO_SAMPLES;
+    want.samples = AUDIO_SAMPLES;
     want.callback = MelodyAudioCallback;
     want.userdata = &melody;
 
