@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include "notes.hpp"
 
-const float PI = 3.14159274101f;
+const float PI = 3.14159265359f;
 
 void sec(int code)
 {
