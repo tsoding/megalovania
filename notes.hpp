@@ -1,9 +1,3 @@
-// #define A1  (220.00f * 2.0f)
-// #define D1  (146.83f * 2.0f)
-// #define D2  (293.66f * 2.0f)
-// #define F1  (174.61f * 2.0f)
-// #define G1  (196.00f * 2.0f)
-// #define GS1 (207.65f * 2.0f)
 #define P 0.0f
 
 #define C0  (16.35f * 2.0f)
