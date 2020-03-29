@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include "notes.hpp"
 
 const float PI = 3.14159274101f;
 
@@ -64,30 +65,23 @@ struct Melody
 
 const int BPM = 130;
 
-#define A1  (220.00f * 2.0f)
-#define D1  (146.83f * 2.0f)
-#define D2  (293.66f * 2.0f)
-#define F1  (174.61f * 2.0f)
-#define G1  (196.00f * 2.0f)
-#define GS1 (207.65f * 2.0f)
-#define P 0.0f
 
 #define Dur(n) (float) ((4.0f * (1.0f / (BPM / 60.0))) / (float) (n))
 
 Note megalovania[] = {
-    {D1,  Dur(16)},
-    {D1,  Dur(16)},
-    {D2,  Dur(8)},
-    {A1,  Dur(8)},
+    {D3,  Dur(16)},
+    {D3,  Dur(16)},
+    {D4,  Dur(8)},
+    {A3,  Dur(8)},
     {P,   Dur(16)},
-    {GS1, Dur(16)},
+    {GS3, Dur(16)},
     {P,   Dur(16)},
-    {G1,  Dur(16)},
+    {G3,  Dur(16)},
     {P,   Dur(16)},
-    {F1,  Dur(8)},
-    {D1,  Dur(16)},
-    {F1,  Dur(16)},
-    {G1,  Dur(16)},
+    {F3,  Dur(8)},
+    {D3,  Dur(16)},
+    {F3,  Dur(16)},
+    {G3,  Dur(16)},
 };
 size_t megalovania_count = sizeof(megalovania) / sizeof(megalovania[0]);
 
